@@ -28,17 +28,11 @@ body {
     margin: 0;
  }
 
-@media (max-width) {
-
-   
-}
-
  h2 {
  font-weight: bolder;
  font-size: 2vw; 
  margin: 0;
  padding-top: 1vw;
-
  }
 
  
@@ -67,6 +61,11 @@ body {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.37);
     color: white;
+ }
+
+ .marked {
+   box-shadow: 0 0 10px white;
+   border: 1px solid white;
  }
  
  main {
@@ -125,7 +124,6 @@ body {
  .show_not_hover:hover {
    opacity: 0;
  }
-
 
  /*       GRID  2       */
  .song_list {
