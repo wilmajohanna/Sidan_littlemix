@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    display: flex; /*behöver flex för att aligna och centrera innehållet*/
+    background-image: url(./images/Little-Mix.jpeg);
+    background-size: cover;         /* behöver inte: no-repeat eftersom jag använder cover*/
+    background-attachment: fixed;
+    font-family: "Barlow Condensed";
+    color: white;
+ }
+ 
+ body > div > div{
+    background-color: rgba(0, 0, 0, 0.37);
+    border-radius: 20px;
+    margin: 6vw 3vw;
+    padding: 1vw;
+ }
+ 
+ header > h1 {
+    font-family: "Bungee Shade";
+    font-size: 80px; 
+    margin: 5vh;
+ }
+ 
+ h1 {
+    font-family: "Bungee Outline";
+    font-size: 4vw; 
+    color: white;
+    margin: 0;
+ }
+
+@media (max-width) {
+
+   
+}
+
+ h2 {
+ font-weight: bolder;
+ font-size: 2vw; 
+ margin: 0;
+ padding-top: 1vw;
+
+ }
+
+ 
+ nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    font-size: 2vw;
+    margin: 5vh;
+    color: black;
+ }
+ 
+ nav > div {
+    border-radius: 10px;
+    border: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    flex-grow: 1;
+    text-align: center;
+ }
+ 
+ nav > div:first-child:hover:hover, 
+ nav > div:nth-child(3):hover,
+ nav > div:last-child:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.37);
+    color: white;
+ }
+ 
+ main {
+    padding: 2vw;
+ }
+  /* GRID 1*/
+ 
+ article {
+    display: grid;
+    grid-template-columns: 2fr 1fr;  
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.37);
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 2vw;
+    gap: 1vw;
+ }
+ 
+ .album_data {
+ font-size: 1vw;
+ }
+ 
+ .album_data li {
+ list-style: none;
+;
+ }
+ 
+ .cover {
+    display: flex;
+    position: relative;
+ }
+
+ .show_hover {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    opacity: 1;
+    transition-duration: 1s;
+    transition-property: opacity;
+ } 
+
+ .show_hover:hover {
+    cursor: pointer;
+    opacity: 0;
+ }
+ 
+ .show_not_hover {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+ }
+ 
+ .show_not_hover:hover {
+   opacity: 0;
+ }
+
+
+ /*       GRID  2       */
+ .song_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column: 2 / 3;
+    grid-row: 2;
+    gap: 1vw;
+    list-style-type: none;
+    color: #e02964;
+    font-size: 1vw;
+ }
+ 
+ .song_list li {
+    font-size: 1vw;  
+   }
+
+.song_list ul {
+   margin-top: 0;
+}
+ 
+ .song_list h2 {
+    font-size: 1.5vw;
+    padding-left: 2vw;
+ }
+ 
+ .song_list > div:first-child {
+   background-color: #de8685;
+    border-radius: 0 0 0 20px;
+ }
+
+ .song_list > div:nth-child(2) {
+   background-color: #de8685;
+    border-radius: 0 0 20px 0;
+ }
+ 
+ /*       GRID  3      */
+ #between_us .anecdotes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+ 
+    grid-column: 1 / 3;
+    grid-row: 3;
+    gap: 0.5vw;
+    font-size: 1vw;
+    padding-left: 0;
+    margin: 0;
+ }
+ 
+ .anecdotes li {
+    list-style: none;
+    font-size: 1vw;
+    padding: 4.5vw 1vw;
+ }
+ 
+ .box_1 {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 20px 0 20px 20px;
+    }
+ 
+ .empty_box_2_tablet, .empty_phone_empty {
+ display: none;
+ } 
+ 
+ .box_3 {
+    grid-column: 3 / 5 ;
+    grid-row: 1;
+    border-radius: 20px 20px 20px 0;
+    }
+ 
+   #between_us .anecdotes .img_box_5 {
+   background-image: url(/images/john\ giddings.jpeg);
+   background-size: cover;
+   display: flex;
+   align-items: flex-end;
+   padding: 1vw;
+   grid-column: 5;
+   grid-row: 1;
+   border-radius: 0 20px 20px 20px;
+    }
+   
+
+
+ .box_6 {
+    grid-column: 6 ;
+    grid-row: 1;
+    border-radius: 20px 20px 0 20px;
+    }
+ 
+ .box_1, .box_3, .box_6 {
+   background-color:#e02964;
+   color:#de8685; 
+}
+ 
+#confetti .anecdotes {
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+   grid-template-rows: 1fr; 
+   grid-column: 1 / 3;
+   gap: 0.5vw;
+   font-size: 1vw;
+   padding-left: 0;
+   margin: 0;
+}   
+ 
+#confetti .box_1 {
+   grid-column: 1 / 3;
+   border-radius: 40px 40px 40px 0;
+}
+ 
+.box_2 {
+       grid-column: 3;
+       border-radius: 0 40px 40px 40px;
+    }
+ 
+.img_wide {
+   grid-column: 4 / 6;
+   border-radius: 0 40px 40px 40px;
+}
+ 
+.box_last {
+   grid-column: 6;
+   border-radius: 40px 40px 0 40px;
+}
+ 
+#confetti .box_1, .box_2, .box_last {
+   background-color: #591987;
+   color:#57cad4;
+}
+
+#confetti .anecdotes .img_wide {
+background-image: url(/images/onstage.webp);
+background-size: cover;
+display: flex;
+align-items: flex-end;
+padding: 1vw;
+}
+
+#confetti .song_list > div:first-child, #confetti .song_list > div:nth-child(2) {
+   background-color: #57cad4;
+   color: #591987;
+ }
+
+
+footer{
+align-items: flex-end;
+margin: 0;
+padding-top: 1vw;
+}
