@@ -29,7 +29,7 @@ body {
  }
 
  h2 {
- font-weight: bolder;
+ font-weight: bold;
  font-size: 2vw; 
  margin: 0;
  padding-top: 1vw;
@@ -368,13 +368,13 @@ padding: 1vw;
    }
 
 #between_us article {
-   grid-template-rows: 2fr auto 2fr;
+   grid-template-rows: repeat(3, auto);
 }
 
 .best .song_list {
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 2fr 2fr;
+   grid-template-rows: 1fr 1fr;
 
    grid-column: 2;
    grid-row: 1;
@@ -393,8 +393,9 @@ padding: 1vw;
    border-radius: 0 0 20px 0;
  }
 
+ /* --------------------------   Between Us anecdotes   -------------------------------- */
  #between_us .anecdotes {
-   grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: auto;
    grid-template-rows: 1fr 1fr;
  }
  
@@ -432,22 +433,75 @@ grid-template-columns: auto;
 /* --------------------------------    500 px    --------------------------------  */
 
 @media (max-width:500px) {
-   .cover {
-      border-radius: 20px 20px 0 0;
+   
+   body > div > div {
+      margin:0;
+      border-radius: 0;
    }
 
+   article {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+   }
+   
+   .cover {
+      border-radius: 20px 20px 0 0;
+      grid-row: 1;
+   }
+
+   .best .song_list {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: 2fr;
+      grid-column: 1;
+      grid-row: 2;
+   }
+   
     .song_list > div:first-child {
-      border-radius: 0 20px 0 0px;
+      border-radius: 0 0 0 20px;
    }
 
    .song_list > div:nth-child(2) {
     border-radius: 0 0 20px 0;
  }
 
- body > div > div {
-   margin:0;
-   border-radius: 0;
+ .album_data {
+   grid-row: 3;
+}
+/* --------------------------   Between Us anecdotes   -------------------------------- */
+
+
+#between_us .anecdotes {
+   grid-template-columns: 1;
+   grid-template-rows: repeat(3, auto);
+
+   grid-row: 4;
+ }
  
+#between_us .anecdotes .img_box_5 {
+   grid-column: 2;
+   grid-row: 2;
+}
+
+.box_6 {
+   grid-column: 3;
+   grid-row: 2;
+}
+/* --------------------------   Confetti anecdotes   -------------------------------- */
+
+#confetti .anecdotes {
+grid-template-rows: 1fr 1fr;
+grid-template-columns: repeat(4, 2fr)
+}
+
+#confetti .anecdotes .img_wide {
+   grid-column: 1 / 4;
+   grid-row: 2;
+}
+
+.box_last {
+   grid-column: 3;
+   grid-row: 2;
 }
 
 }
