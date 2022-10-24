@@ -5,7 +5,7 @@
 body {
     margin: 0;
     display: flex; /*behöver flex för att aligna och centrera innehållet*/
-    background-image: url(./images/Little-Mix.jpeg);
+    background-image: url(./images/Little-Mix.jpg);
     background-size: cover;         /* behöver inte: no-repeat eftersom jag använder cover*/
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -219,7 +219,7 @@ p {
     }
  
    #between_us .anecdotes .img_box_5 {
-   background-image: url(/images/john\ giddings.jpeg);
+   background-image: url(/images/john\ giddings.jpg);
    background-size: cover;
    display: flex;
    align-items: flex-end;
@@ -298,7 +298,7 @@ p {
 }
 
 #confetti .anecdotes .img_wide {
-background-image: url(/images/onstage.webp);
+background-image: url(/images/onstage.jpg);
 background-size: cover;
 display: flex;
 align-items: flex-end;
