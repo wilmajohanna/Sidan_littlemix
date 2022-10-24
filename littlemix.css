@@ -8,7 +8,8 @@ body {
     background-image: url(./images/Little-Mix.jpeg);
     background-size: cover;         /* behöver inte: no-repeat eftersom jag använder cover*/
     background-attachment: fixed;
-    font-family: "Barlow Condensed";
+    background-repeat: no-repeat;
+    font-family: Barlow Condensed;
     color: white;
  }
  
@@ -18,7 +19,7 @@ body {
     margin: 6vw 3vw;
     padding: 1vw;
  }
- 
+
  header > h1 {
     font-family: "Bungee Shade";
     font-size: calc(4 * var(--storlek));
@@ -27,54 +28,13 @@ body {
  
  h1 {
     font-family: "Bungee Outline";
-    font-size: calc(4 * var(--storlek));
+    font-size: calc(2 * var(--storlek));
     color: white;
     margin: 0;
-
  }
 
-.album_data > div > h2 {
-   font-family: "";
-   font-weight: bolder;
-   font-size: calc(1.3 * var(--storlek));
-   margin: 0;
-   padding-top: 0;
-   padding-bottom: 4vw;
- }
-
- .album_data li {
-   list-style: none;
+p {
    font-size: var(--storlek);
-   }
-
-.album_data ul {
-      margin-top: 0;
-   }
-   
-.album_data p {
-      margin-bottom: 0;
-   }
-    
- p {
- font-size: var(--storlek);
- }
-
- .album_description {
-   font-size: var(--storlek);
- }
- 
-#confetti .album_data:before {
-   content: '';
-   background-image: url(/images/number-1-icon.png);
-   background-size: 7vh 7vh;
-   background-repeat: no-repeat;
-   height: 100px;
-   width: 100px;
-   top: -25px;
-   left: -25px;
-   display: inline-block;
-   position: relative;
-
 }
 
  nav {
@@ -108,7 +68,8 @@ body {
  .marked {
    box-shadow: 0 0 10px white;
    border: 1px solid white;
-   font-weight: bold;
+   font-family: Condensed;
+   font-weight: Bold;
  }
  
  main {
@@ -159,6 +120,30 @@ body {
    opacity: 0;
  }
 
+ .album_data p {
+   margin-bottom: 0;
+}
+
+.album_data > div > h2 {
+   font-family: "Condensed";
+   font-size: calc(1.3 * var(--storlek));
+   margin: 0;
+   padding-top: 0;
+   padding-bottom: 4vw;
+ }
+
+ .album_data li {
+   list-style: none;
+   font-size: var(--storlek);
+   }
+
+.album_data ul {
+      margin-top: 0;
+   }
+
+.album_description {
+   font-size: var(--storlek);
+   }
 /*   --------------------------------  GRID  2  -------------------------------- */
  .song_list {
     display: grid;
@@ -168,7 +153,6 @@ body {
     grid-row: 2;
     gap: 1vw;
     list-style-type: none;
-    color: #e02964;
  }
 
  .song_list li {
@@ -187,12 +171,14 @@ body {
  }
  
  .song_list > div:first-child {
-    background-color: #de8685;
+    background-color: #debab3;
+    color: #de8685;
     border-radius: 0 0 0 20px;
  }
 
  .song_list > div:nth-child(2) {
     background-color: #de8685;
+    color: #debab3;
     border-radius: 0 0 20px 0;
  }
  
@@ -241,6 +227,7 @@ body {
    grid-column: 5;
    grid-row: 1;
    border-radius: 0 20px 20px 20px;
+   color: #debab3;
     }
    
 
@@ -252,12 +239,29 @@ body {
  
  .box_1, .box_3, .box_6 {
    background-color:#e02964;
-   color:#de8685; 
+   color:#debab3; 
 }
 
 
   /*   --------------------------------  GRID  4  -------------------------------- */
-#confetti .anecdotes {
+  #confetti .album_data {
+   position: relative;
+   }
+   
+   #confetti .album_data:before {
+   content: '';
+   background-image: url(/images/number-1-icon.png);
+   background-size: 5vh 5vh;
+   background-repeat: no-repeat;
+   height: 100px;
+   width: 100px;
+   top: -25px;
+   left: -25px;
+   display: inline-block;
+   position: absolute;
+   }
+
+  #confetti .anecdotes {
    display: grid;
    grid-template-columns: repeat(6, 1fr);
    grid-template-rows: 1fr; 
@@ -290,7 +294,7 @@ body {
  
 #confetti .box_1, .box_2, .box_last {
    background-color: #591987;
-   color:#57cad4;
+   color:#44c1bf;
 }
 
 #confetti .anecdotes .img_wide {
@@ -301,9 +305,13 @@ align-items: flex-end;
 padding: 1vw;
 }
 
-#confetti .song_list > div:first-child, #confetti .song_list > div:nth-child(2) {
-   background-color: #57cad4;
-   color: #591987;
+#confetti .song_list div:first-child {
+   background-color: #2b217a;
+   color: #44c1bf;
+ }
+ #confetti .song_list div:nth-child(2) {
+background-color: #44c1bf;
+color: #2b217a;
  }
 
  footer{
@@ -367,7 +375,7 @@ padding: 1vw;
    }
    
    nav > div {
-      font-size: 22.2px;
+      font-size: 17.5px;
    }
    
    .album_data > div > h1 {
@@ -408,6 +416,13 @@ padding: 1vw;
 
 @media (max-width:800px) {
 
+body {
+   background-image: url(./images/Little-Mix-tablet.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;     
+   background-attachment: fixed;
+   }
+
  header > h1 {
    text-align: center;
    margin: 0;
@@ -420,7 +435,7 @@ padding: 1vw;
    }
 
 .show_hover:hover{
-   opacity:1;
+   opacity: 1;
 }
 
 #between_us article {
@@ -496,6 +511,11 @@ padding: 1vw;
    grid-template-rows: 2fr auto 2fr;
 }
 
+#confetti .album_data:before {
+   top: -15px;
+   z-index: 1;
+   }
+
 #confetti .anecdotes {
 grid-template-rows: 1fr 1fr;
 grid-template-columns: auto;
@@ -556,6 +576,13 @@ footer {
 
 @media (max-width:500px) {
    
+   body {
+      background-image: url(./images/Little-Mix-phone.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;     
+      background-attachment: fixed;
+      }
+
    body > div > div {
       margin:0;
       border-radius: 0;
@@ -609,6 +636,10 @@ footer {
    grid-row: 2;
 }
 /* --------------------------   Confetti anecdotes   -------------------------------- */
+#confetti .album_data:before {
+  
+   background-size: 5vh 5vh;
+   }
 
 #confetti .anecdotes {
    grid-template-rows: 1fr 1fr;
